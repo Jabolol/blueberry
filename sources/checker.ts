@@ -4,11 +4,6 @@ const data = new TextDecoder().decode(
   await Deno.readFile("./coding-style-reports.log"),
 );
 
-if (!data) {
-  console.log("::error::The coding style report was not found.");
-  Deno.exit(1);
-}
-
 type Metadata = { errors: number; skipped: number };
 
 const { errors, skipped } = data.trim().split("\n").reduce<Metadata>(
