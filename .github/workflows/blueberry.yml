@@ -1,0 +1,13 @@
+name: blueberry
+run-name: Blueberry checker launched by @${{ github.actor }}
+
+on: [push]
+
+jobs:
+  coding_style:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Check the coding style
+        uses: Jabolol/blueberry@main

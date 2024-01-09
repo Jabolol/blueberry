@@ -1,0 +1,5 @@
+name: "Blueberry"
+description: "Epitech coding style checker"
+runs:
+  using: "docker"
+  image: "Dockerfile"
