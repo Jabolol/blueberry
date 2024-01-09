@@ -8,6 +8,10 @@ ENV HOME=/root
 
 ENV PATH="$HOME/.deno/bin:$PATH"
 
+WORKDIR /app
+
 COPY . .
 
-ENTRYPOINT [ "/main.sh" ]
+RUN chmod +x main.sh
+
+ENTRYPOINT [ "/app/main.sh" ]
