@@ -1,6 +1,6 @@
 FROM ghcr.io/epitech/coding-style-checker:latest
 
-RUN dnf install -y unzip
+RUN apt-get update && apt-get install -y unzip
 
 RUN curl -fsSL https://deno.land/x/install/install.sh | sh
 
