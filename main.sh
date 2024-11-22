@@ -11,4 +11,4 @@
 ##
 
 check.sh $(pwd) $(pwd) > /dev/null
-deno run --allow-read --allow-env sources/checker.ts
+deno run --allow-read --allow-env https://raw.githubusercontent.com/Jabolol/blueberry/refs/heads/main/sources/checker.ts
