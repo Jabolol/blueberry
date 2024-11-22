@@ -1,5 +1,4 @@
-Blueberry
-=========
+# Blueberry
 
 Blueberry is a GitHub Action that checks the coding style of your C/C++/Haskell
 code, following EPITECH's coding style.
@@ -7,12 +6,11 @@ code, following EPITECH's coding style.
 The action will fail if your project does not follow the coding style, telling
 you what is wrong and where it is wrong.
 
-Workflow
---------
+# Workflow
 
 This is an example of a workflow that uses Blueberry:
 
-```
+```yaml
 name: blueberry
 run-name: Blueberry checker launched by @${{ github.actor }}
 
@@ -28,8 +26,7 @@ jobs:
         uses: Jabolol/blueberry@main
 ```
 
-License
--------
+# License
 
-The project is licensed under the terms of the MIT license. See LICENSE for more
-details.
+The project is licensed under the terms of the MIT license. See
+[LICENSE](./LICENSE) for more details.
