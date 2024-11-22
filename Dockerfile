@@ -1,6 +1,11 @@
 FROM ghcr.io/epitech/coding-style-checker:latest
 
-RUN apt-get update && apt-get install -y unzip
+RUN sed -i \
+    -e 's|http://archive.ubuntu.com/ubuntu|http://old-releases.ubuntu.com/ubuntu|g' \
+    -e 's|http://security.ubuntu.com/ubuntu|http://old-releases.ubuntu.com/ubuntu|g' \
+    /etc/apt/sources.list
+
+RUN apt update && apt install -y unzip curl
 
 RUN curl -fsSL https://deno.land/x/install/install.sh | sh
 
